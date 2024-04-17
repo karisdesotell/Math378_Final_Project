@@ -1,0 +1,10 @@
+"0","from joblib import dump, load"
+"0",""
+"0","# Assume `model` is your trained model"
+"0","model_directory = 'C:/Users/C25Karis.Desotell/OneDrive - afacademy.af.edu/Documents/Spring 2024/Math 378/Actual Final Project'"
+"0","model_filename = 'penguin_model.joblib'"
+"0",""
+"0","# Save the model"
+"0","dump(model, f'{model_directory}/{model_filename}')"
+"1","['C:/Users/C25Karis.Desotell/OneDrive - afacademy.af.edu/Documents/Spring 2024/Math 378/Actual Final Project/penguin_model.joblib']
+"

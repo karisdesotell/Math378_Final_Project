@@ -1,0 +1,270 @@
+reticulate::repl_python()
+from palmerpenguins import penguins
+from palmerpenguins import penguins
+from pandas import get_dummies
+import numpy as np
+from sklearn.linear_model
+import LinearRegression
+from sklearn import preprocessing
+from palmerpenguins import penguins
+from pandas import get_dummies
+import numpy as np
+from sklearn.linear_model
+import LinearRegression
+from sklearn import preprocessing
+library(reticulate)
+py_config()
+py_install("palmerpenguins")
+py_install("scikit-learn")
+from palmerpenguins import penguins
+from pandas import get_dummies
+import numpy as np
+from sklearn.linear_model
+import LinearRegression
+from sklearn import preprocessing
+from palmerpenguins import penguins
+from pandas import get_dummies
+import numpy as np
+from sklearn.linear_model import LinearRegression
+import LinearRegression
+from sklearn import preprocessing
+library(reticulate)
+py_config()
+from palmerpenguins import penguins
+from pandas import get_dummies
+import numpy as np
+from sklearn.linear_model import LinearRegression
+import LinearRegression
+from sklearn import preprocessing
+from palmerpenguins import penguins
+from pandas import get_dummies
+import numpy as np
+from sklearn.linear_model import LinearRegression
+import LinearRegression
+from sklearn import preprocessing
+reticulate::repl_python()
+from palmerpenguins import penguins
+from pandas import get_dummies
+import numpy as np
+from sklearn.linear_model import LinearRegression
+import LinearRegression
+from sklearn import preprocessing
+from palmerpenguins import penguins
+from pandas import get_dummies
+import numpy as np
+from sklearn.linear_model import LinearRegression
+import LinearRegression
+from sklearn import preprocessing
+reticulate::repl_python()
+from palmerpenguins import penguins
+from pandas import get_dummies
+import numpy as np
+from sklearn.linear_model import LinearRegression
+import LinearRegression
+from sklearn import preprocessing
+reticulate::repl_python()
+from palmerpenguins import penguins
+from pandas import get_dummies
+import numpy as np
+from sklearn.linear_model import LinearRegression
+import LinearRegression
+from sklearn import preprocessing
+from palmerpenguins import penguins
+from pandas import get_dummies
+import numpy as np
+from sklearn.linear_model import LinearRegression
+from sklearn import preprocessing
+reticulate::repl_python()
+from palmerpenguins import penguins
+from pandas import get_dummies
+import numpy as np
+from sklearn.linear_model import LinearRegression
+from sklearn import preprocessing
+renv::activate()
+library(palmerpenguins)
+library(dplyr)
+library(ggplot2)
+df <- palmerpenguins::penguins
+df %>%
+group_by(species, sex) %>%
+summarise(across(where(is.numeric),
+\(x) mean(x, na.rm = TRUE))) %>%
+knitr::kable()
+df %>%
+ggplot(aes(x = bill_length_mm, y = body_mass_g, color = species)) +
+geom_point() +
+geom_smooth(method = "lm")
+reticulate::repl_python()
+from vetiver import VetiverModel
+v = VetiverModel(model, model_name='penguin_model', prototype_data=X)
+from vetiver import VetiverModel
+v = VetiverModel(model, model_name='penguin_model', prototype_data=X)
+reticulate::repl_python()
+from palmerpenguins import penguins
+from pandas import get_dummies
+import numpy as np
+from sklearn.linear_model import LinearRegression
+from sklearn import preprocessing
+df = penguins.load_penguins().dropna()
+df.head(3)
+X = get_dummies(df[['bill_length_mm', 'species', 'sex']], drop_first = True)
+y = df['body_mass_g']
+model = LinearRegression().fit(X, y)
+print(f"R^2 {model.score(X,y)}")
+print(f"Intercept {model.intercept_}")
+print(f"Columns {X.columns}")
+print(f"Coefficients {model.coef_}")
+print(f"Coefficients {model.coef_}")
+from vetiver import VetiverModel
+v = VetiverModel(model, model_name='penguin_model', prototype_data=X)
+b = pins.board_folder('data/model', allow_pickle_read=True)
+v = VetiverModel.from_pin(b, 'penguin_model')
+v.write('data/model/penguin_model')
+# Re-load the model if necessary
+b = pins.board_folder('data/model', allow_pickle_read=True)
+v = VetiverModel.from_pin(b, 'penguin_model')
+# Generate a FastAPI app from the vetiver model
+from vetiver import VetiverAPI
+app = VetiverAPI(v, check_prototype=True)
+# Run the API server
+# Note: FastAPI's typical run command differs; assuming vetiver provides a simplified method:
+app.run(port=8080)
+from joblib import dump, load
+# Assume `model` is your trained model
+model_directory = 'data/model'
+model_filename = 'penguin_model.joblib'
+# Save the model
+dump(model, f'{model_directory}/{model_filename}')
+# Load the model
+model = load(f'{model_directory}/{model_filename}')
+from joblib import dump, load
+# Assume `model` is your trained model
+model_directory = 'Actual Final Project'
+model_filename = 'penguin_model.joblib'
+# Save the model
+dump(model, f'{model_directory}/{model_filename}')
+import os
+print(os.getcwd())
+from joblib import dump, load
+# Assume `model` is your trained model
+model_directory = 'C:\Users\C25Karis.Desotell\OneDrive - afacademy.af.edu\Documents\Spring 2024\Math 378\Actual Final Project'
+model_filename = 'penguin_model.joblib'
+# Save the model
+dump(model, f'{model_directory}/{model_filename}')
+from joblib import dump, load
+# Assume `model` is your trained model
+model_directory = 'C:/Users/C25Karis.Desotell/OneDrive - afacademy.af.edu/Documents/Spring 2024/Math 378/Actual Final Project'
+model_filename = 'penguin_model.joblib'
+# Save the model
+dump(model, f'{model_directory}/{model_filename}')
+# Load the model
+model = load(f'{model_directory}/{model_filename}')
+# Generate a FastAPI app from the vetiver model
+from vetiver import VetiverAPI
+app = VetiverAPI(v, check_prototype=True)
+# Run the API server
+# Note: FastAPI's typical run command differs; assuming vetiver provides a simplified method:
+app.run(port=8080)
+renv::activate()
+renv::deactivate()
+reticulate::repl_python()
+from fastapi import FastAPI
+from vetiver import VetiverModel, VetiverAPI
+from joblib import load
+# Load your trained model
+model = load('penguin_model.joblib')
+# Create a VetiverModel instance
+v = VetiverModel(model, model_name='penguin_model')
+# Create the FastAPI app
+vetiver_api = VetiverAPI(v)
+app = vetiver_api.app
+# Generate a FastAPI app from the vetiver model
+from vetiver import VetiverAPI
+app = VetiverAPI(v, check_prototype=True)
+# Run the API server
+# Note: FastAPI's typical run command differs; assuming vetiver provides a simplified method:
+app.run(port=8080)
+vetiver_prepare_docker(penguin_model, "penguins")
+renv::activate()
+vetiver_prepare_docker(penguin_model, "penguins")
+renv::snapshot()
+vetiver_prepare_docker(penguin_model, "penguins")
+reticulate::repl_python()
+import vetiver
+import vetiver
+vetiver_prepare_docker(penguin_model, "penguins")
+import vetiver
+prepare_docker(penguin_model, "penguins")
+renv::deactivate
+renv::deactivate()
+renv::snapshot()
+renv::deactivate
+reticulate::repl_python()
+from palmerpenguins import penguins
+from pandas import get_dummies
+import numpy as np
+from sklearn.linear_model import LinearRegression
+from sklearn import preprocessing
+df = penguins.load_penguins().dropna()
+df.head(3)
+X = get_dummies(df[['bill_length_mm', 'species', 'sex']], drop_first = True)
+y = df['body_mass_g']
+model = LinearRegression().fit(X, y)
+print(f"R^2 {model.score(X,y)}")
+print(f"Intercept {model.intercept_}")
+print(f"Columns {X.columns}")
+print(f"Coefficients {model.coef_}")
+from vetiver import VetiverModel
+v = VetiverModel(model, model_name='penguin_model', prototype_data=X)
+import pins
+from vetiver import vetiver_pin_write
+b = pins.board_folder('data/model', allow_pickle_read=True)
+vetiver_pin_write(b, v)
+from joblib import dump, load
+# Assume `model` is your trained model
+model_directory = 'C:/Users/C25Karis.Desotell/OneDrive - afacademy.af.edu/Documents/Spring 2024/Math 378/Actual Final Project'
+model_filename = 'penguin_model.joblib'
+# Save the model
+dump(model, f'{model_directory}/{model_filename}')
+# Load the model
+model = load(f'{model_directory}/{model_filename}')
+renv::activate()
+DBI::dbDisconnect(con)
+install.packages("DBI")
+install.packages("duckdb")
+renv::snapshot()
+install.packages("duckdb")
+con <- DBI::dbConnect(duckdb::duckdb(), dbdir = "my-db.duckdb")
+DBI::dbWriteTable(con, "penguins", palmerpenguins::penguins)
+DBI::dbDisconnect(con)
+reticulate::repl_python()
+import duckdb
+from palmerpenguins import penguins
+con = duckdb.connect('my-db.duckdb')
+df = penguins.load_penguins()
+con.execute('CREATE TABLE penguins AS SELECT * FROM df')
+con.close()
+quit
+con <- DBI::dbConnect(duckdb::duckdb(), dbdir = "my-db.duckdb")
+DBI::dbWriteTable(con, "penguins", palmerpenguins::penguins)
+renv::snapshot()
+reticulate::repl_python()
+import duckdb
+from palmerpenguins import penguins
+con = duckdb.connect('my-db.duckdb')
+df = penguins.load_penguins()
+con.execute('CREATE TABLE penguins AS SELECT * FROM df')
+con.close()
+quit
+con <- DBI::dbConnect(duckdb::duckdb(), dbdir = "my-db.duckdb")
+DBI::dbWriteTable(con, "penguins", palmerpenguins::penguins)
+library(dplyr)
+library(ggplot2)
+library(dbplyr)
+install.packages("tidyverse")
+renv::snapshot()
+library(dplyr)
+library(ggplot2)
+library(dbplyr)
+renv::deactivate()
+renv::activate()

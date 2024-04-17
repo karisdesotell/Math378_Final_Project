@@ -1,0 +1,15 @@
+---
+title: "Model"
+format: 
+  html: 
+    code-fold: true
+---
+
+```{python}
+from palmerpenguins import penguins
+from pandas import get_dummies
+import numpy as np
+from sklearn.linear_model 
+import LinearRegression
+from sklearn import preprocessing
+```

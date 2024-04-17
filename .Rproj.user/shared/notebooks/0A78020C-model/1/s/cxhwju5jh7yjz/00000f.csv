@@ -1,0 +1,6 @@
+"0","import vetiver"
+"0","prepare_docker(penguin_model, ""penguins"")"
+"2","Traceback (most recent call last):
+  File ""<string>"", line 1, in <module>
+NameError: name 'prepare_docker' is not defined
+"

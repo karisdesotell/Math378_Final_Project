@@ -1,0 +1,32 @@
+"0",""
+"0","# Generate a FastAPI app from the vetiver model"
+"0","from vetiver import VetiverAPI"
+"0",""
+"0","app = VetiverAPI(v, check_prototype=True)"
+"0",""
+"0","# Run the API server"
+"0","# Note: FastAPI's typical run command differs; assuming vetiver provides a simplified method:"
+"0","app.run(port=8080)"
+"2","INFO:     Started server process [4420]
+"
+"2","INFO:     Waiting for application startup.
+INFO:     VetiverAPI starting...
+INFO:     Application startup complete.
+"
+"2","INFO:     Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+"
+"1","INFO:     127.0.0.1:54777 - ""GET / HTTP/1.1"" 307 Temporary Redirect
+"
+"1","INFO:     127.0.0.1:54777 - ""GET /__docs__ HTTP/1.1"" 200 OK
+"
+"1","INFO:     127.0.0.1:54777 - ""GET /openapi.json HTTP/1.1"" 200 OK
+"
+"1","INFO:     127.0.0.1:54777 - ""GET /favicon.ico HTTP/1.1"" 404 Not Found
+"
+"2","INFO:     Shutting down
+"
+"2","INFO:     Waiting for application shutdown.
+"
+"2","INFO:     Application shutdown complete.
+INFO:     Finished server process [4420]
+"
